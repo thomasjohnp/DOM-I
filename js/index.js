@@ -71,7 +71,7 @@ let h1Var = document.querySelector("h1");
 h1Var.innerHTML = "DOM <br>Is<br> Awesome";
 
 let buttonyButton = document.querySelector("button");
-buttonyButton.textContent = "Get Started";
+buttonyButton.textContent = siteContent["cta"]["button"];
 
 let earthImg = document.getElementById("cta-img");
 earthImg.setAttribute("src", siteContent["cta"]["img-src"]);
