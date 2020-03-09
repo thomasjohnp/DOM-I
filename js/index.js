@@ -42,13 +42,13 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 let navLinks = document.querySelectorAll("a");
-navLinks.forEach((link, i) => (
+navLinks.forEach((_, i) => (
   navLinks[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
 ));
 
-navLinks.forEach((link, i) => (
-    navLinks[i].style.color = "green"
-));
+navLinks.forEach(link => {
+  link.style.color = "green";
+});
 
 let newA = document.createElement("a");
 newA.textContent = "Blargh";
@@ -71,8 +71,6 @@ buttonyButton.textContent = "Get Started"
 
 let earthImg = document.getElementById("cta-img");
 earthImg.setAttribute('src', siteContent["cta"]["img-src"]);
-
-let mainContent = document.getElementsByClassName("main-content");
 
 let codeImg = document.getElementById("middle-img");
 codeImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
