@@ -39,4 +39,64 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+let navLinks = document.querySelectorAll("a");
+navLinks.forEach((link, i) => (
+  navLinks[i].textContent = siteContent["nav"][`nav-item-${i+1}`]
+));
+
+navLinks.forEach((link, i) => (
+    navLinks[i].style.color = "green"
+));
+
+let newA = document.createElement("a");
+newA.textContent = "Blargh";
+let newA2 = document.createElement("a");
+newA2.textContent = "Donkey";
+let navParent = document.querySelector("nav");
+
+navParent.prepend(newA);
+navParent.append(newA2);
+
+newA.style.color = "green";
+newA2.style.color = "green";
+
+
+let h1Var = document.querySelector("h1");
+h1Var.innerHTML = "DOM <br>Is<br> Awesome";
+
+let buttonyButton = document.querySelector("button");
+buttonyButton.textContent = "Get Started"
+
+let earthImg = document.getElementById("cta-img");
+earthImg.setAttribute('src', siteContent["cta"]["img-src"]);
+
+let mainContent = document.getElementsByClassName("main-content");
+
+let codeImg = document.getElementById("middle-img");
+codeImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+let cardTitles = document.querySelectorAll(".text-content h4");
+cardTitles[0].textContent = "Features";
+cardTitles[1].textContent = "About";
+cardTitles[2].textContent = "Services";
+cardTitles[3].textContent = "Product";
+cardTitles[4].textContent = "Vision";
+
+let cardContent = document.querySelectorAll(".text-content p");
+let fillerContent = "content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis";
+
+cardContent[0].textContent = "Features " + fillerContent;
+cardContent[1].textContent = "About " + fillerContent;
+cardContent[2].textContent = "Services " + fillerContent;
+cardContent[3].textContent = "Product " + fillerContent;
+cardContent[4].textContent = "Vision " + fillerContent;
+
+let contactTitle = document.querySelector(".contact h4");
+contactTitle.textContent = "Contact";
+let contactText = document.querySelector(".contact p");
+contactText.innerHTML = "123 Way 456 Street<br> Somewhere, USA</p><p>1 (888) 888-8888</p> <p>sales@greatidea.io</p>";
+
+let theFooter = document.querySelector("footer p");
+theFooter.textContent = "Copyright Great Idea! 2018"
